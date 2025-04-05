@@ -5,5 +5,7 @@ To run the game just download the archive for your system from the dist director
 Note that the assets folder MUST be in the same directory as the executable.
 
 To compile the binary yourself you can use:
+
 > pip install pyinstaller
+
 > pyinstaller --onefile --windowed --icon=./assets/iconProject.ico main.py --name=TicTacToe
