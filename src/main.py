@@ -21,13 +21,13 @@ def setWindowRoundedCorners(hwnd, radius=15):
     class RECT(ctypes.Structure):
         _fields_ = [("left", ctypes.c_long), ("top", ctypes.c_long),
                    ("right", ctypes.c_long), ("bottom", ctypes.c_long)]
-    
+
     rect = RECT()
     user32 = ctypes.windll.user32
     user32.GetWindowRect(hwnd, ctypes.byref(rect))
     width = rect.right - rect.left
     height = rect.bottom - rect.top
-    
+
     region = ctypes.windll.gdi32.CreateRoundRectRgn(0, 0, width, height, radius, radius)
     result = user32.SetWindowRgn(hwnd, region, True)
     ctypes.windll.gdi32.DeleteObject(region)
