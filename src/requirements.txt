@@ -1,6 +1,7 @@
 pygame>=2.6.1
 pyinstaller>=6.12.0
 pywin32-ctypes>=0.2.3
+virtualenv>=20.25.0+ds
 altgraph>=0.17.4
 packaging>=24.2
 pyinstaller-hooks-contrib>=2025.2

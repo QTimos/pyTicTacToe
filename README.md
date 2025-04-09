@@ -5,7 +5,7 @@
 
 A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame. Created as part of the Cerberus coding challenge.
 
-## Demo  
+## Demo
 
 <div align="center">
   <img src="./assets/Animation.gif" alt="Demo of My Program" width="400">
@@ -51,19 +51,30 @@ pip install -r src/requirements.txt
 python src/main.py
 ```
 
-### Option 3: Build Your Own Binary
+### Option 3: Build Your Own Binary Using Pyinstaller
 
-1. Navigate to the source directory:
+#### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+
+#### Steps
+1. Clone or download the repository
+2. Navigate to the source directory:
 ```bash
 cd path/to/pyTicTacToe/src
 ```
 
-2. Install PyInstaller:
+3. Install dependencies:
 ```bash
-pip install pyinstaller
+pip install -r src/requirements.txt
 ```
 
-3. Build the executable:
+If You're On linux And You're Having A Problem Installing PyInstaller Use A Virtual Envirenement (don't install pyinstaller using your system's package manager):
+```bash
+pip install virtualenv
+```
+
+4. Build the executable:
 ```bash
 pyinstaller ../TicTacToe.spec
 ```
