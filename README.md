@@ -46,11 +46,6 @@ cd path/to/pyTicTacToe
 pip install -r src/requirements.txt
 ```
 
-or:
-```bash
-pip install pygame
-```
-
 4. Run the game:
 ```bash
 python src/main.py
