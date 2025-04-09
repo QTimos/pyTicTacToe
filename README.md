@@ -8,7 +8,7 @@ A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pyg
 ## Demo  
 
 <div align="center">
-  <img src="./assets/Animation.gif" alt="Demo of My Program" height="400">
+  <img src="./assets/Animation.gif" alt="Demo of My Program" width="400">
 </div>
 
 ## Features
@@ -125,13 +125,13 @@ pyTicTacToe/
 
 1. To contribute or modify:
 
-    Fork the repository
+        Fork the repository
 
-    Install development requirements
+        Install development requirements
 
-    Make your changes
+        Make your changes
 
-    Submit a pull request
+        Submit a pull request
 
 ## License
 
@@ -142,8 +142,3 @@ To use this:
 2. Copy ALL of the above text (from `# pyTicTacToe` to the end)
 3. Paste it into your new file
 4. Save the file
-
-The formatting will automatically work when viewed on GitHub or other Markdown-supported platforms. Remember to:
-- Add a real screenshot file to your assets folder
-- Create a LICENSE file if you're using the MIT license
-- Update any paths if your project structure is different
