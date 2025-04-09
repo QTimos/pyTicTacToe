@@ -54,12 +54,6 @@ python src/main.py
 ### Option 3: Build Your Own Binary
 
 1. Navigate to the source directory:
-if you're on windows:
-```bash
-cd path/to/pyTicTacToe/src
-```
-
-if you're on linux or mac:
 ```bash
 cd path/to/pyTicTacToe/src
 ```
