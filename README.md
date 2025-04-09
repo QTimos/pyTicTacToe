@@ -37,12 +37,6 @@ A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pyg
 #### Steps
 1. Clone or download the repository
 2. Navigate to the project directory:
-if you're on windows:
-```bash
-cd path/to/pyTicTacToe
-```
-
-if you're on linux or mac:
 ```bash
 cd path/to/pyTicTacToe
 ```
