@@ -1,11 +1,15 @@
 # pyTicTacToe
-![Tic-Tac-Toe](./assets/iconProject.png)
+<div align="center">
+  <img src="./assets/iconProject.png" alt="Tic-Tac-Toe" width="200">
+</div>
 
 A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame. Created as part of the Cerberus coding challenge.
 
 ## Demo  
 
-![Demo of My Program](./assets/Animation.gif) 
+<div align="center">
+  <img src="./assets/Animation.gif" alt="Demo of My Program" width="400">
+</div>
 
 ## Features
 
