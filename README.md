@@ -1,6 +1,6 @@
 # pyTicTacToe
 <div align="center">
-  <img src="./assets/iconProject.png" alt="Tic-Tac-Toe" width="200">
+  <img src="./assets/iconProject.png" alt="Tic-Tac-Toe" width="65">
 </div>
 
 A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame. Created as part of the Cerberus coding challenge.
@@ -8,7 +8,7 @@ A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pyg
 ## Demo  
 
 <div align="center">
-  <img src="./assets/Animation.gif" alt="Demo of My Program" width="400">
+  <img src="./assets/Animation.gif" alt="Demo of My Program" height="400">
 </div>
 
 ## Features
@@ -57,7 +57,7 @@ or:
 pip install pygame
 ```
 
-3. Run the game:
+4. Run the game:
 ```bash
 python src/main.py
 ```
@@ -99,6 +99,7 @@ Click replay to restart after a game ends
 
 ## Project Structure
 
+<pre>
 pyTicTacToe/
 ├── src/                         # Source code
 │   ├── main.py                  # Main game logic
@@ -118,6 +119,7 @@ pyTicTacToe/
 ├── TicTacToe.spec               # spec file
 ├── README.md                    # This file
 └── LICENSE                      # License file
+</pre>
 
 ## Development
 
