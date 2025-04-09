@@ -46,38 +46,94 @@ cd path/to/pyTicTacToe
 pip install -r src/requirements.txt
 ```
 
+* If You're On linux And You're Having A Problem Installing Dependencies Use This:
+ 1. Install virtualenv (you can use your prefered shell instead of "bash"):
+    ```bash
+    pipx install virtualenv
+    pipx ensurepath
+    bash
+    ```
+ 2. Make a virtual environment:
+    ```bash
+    virtualenv venv
+    ```
+ 3. Run the virtual environment:
+    ```bash
+    source venv/bin/activate
+    ```
+ 4. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+* If You Used Virtualenv:
+ - Clean up virtual environment:
+    ```bash
+    deactivate
+    rm -rf venv
+    exit
+    ```
+
 4. Run the game:
 ```bash
 python src/main.py
 ```
+
 
 ### Option 3: Build Your Own Binary Using Pyinstaller
 
 #### Prerequisites
 - Python 3.8 or higher
 - pip package manager
+- pipx package manager
 
 #### Steps
-1. Clone or download the repository
-2. Navigate to the source directory:
+1. Open your prefered shell in a terminal emulator
+2. Clone or download the repository
+3. Navigate to the source directory:
 ```bash
 cd path/to/pyTicTacToe/src
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
-pip install -r src/requirements.txt
+pip install -r requirements.txt
 ```
 
-If You're On linux And You're Having A Problem Installing PyInstaller Use A Virtual Envirenement (don't install pyinstaller using your system's package manager):
-```bash
-pip install virtualenv
-```
+* If You're On linux And You're Having A Problem Installing Dependencies Use This:
+ 1. Install virtualenv (you can use your prefered shell instead of "bash"):
+    ```bash
+    pipx install virtualenv
+    pipx ensurepath
+    bash
+    ```
+ 2. Make a virtual environment:
+    ```bash
+    virtualenv venv
+    ```
+ 3. Run the virtual environment:
+    ```bash
+    source venv/bin/activate
+    ```
+ 4. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-4. Build the executable:
+5. Build the executable:
 ```bash
 pyinstaller ../TicTacToe.spec
 ```
+
+* If You Used Virtualenv:
+ - Clean up virtual environment:
+    ```bash
+    deactivate
+    rm -rf venv
+    exit
+    ```
+
+* The Binary Will Be in "CURRENTPATH/dist/"
 
 ## How to Play
 
