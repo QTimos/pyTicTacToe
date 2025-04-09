@@ -20,9 +20,7 @@ def minimizeWindow(hwnd):
 
 def setWindowRoundedCorners(hwnd, radius=15):
     class RECT(ctypes.Structure):
-        _fields_ = [("left", ctypes.c_long), ("top", ctypes.c_long),
-                   ("right", ctypes.c_long), ("bottom", ctypes.c_long)]
-
+        _fields_ = [("left", ctypes.c_long), ("top", ctypes.c_long), ("right", ctypes.c_long), ("bottom", ctypes.c_long)]
     rect = RECT()
     user32 = ctypes.windll.user32
     user32.GetWindowRect(hwnd, ctypes.byref(rect))
@@ -328,8 +326,12 @@ def main():
             turnText = textFont.render("Current turn is :", False, gridColor)
             turnSymbol = turnSymbolFont.render(turn, False, gridColor)
             window.blit(turnText, (90, 425))
-            pygame.draw.rect(window,backgroundColor,(262,424,42,42))
-            window.blit(turnSymbol, (266, 408))
+            if sys.platform == "win32":
+                pygame.draw.rect(window,backgroundColor,(262,424,42,42))
+                window.blit(turnSymbol, (266, 407))
+            else :
+                pygame.draw.rect(window,backgroundColor,(257,420,42,42))
+                window.blit(turnSymbol, (266, 411))
             pygame.display.update()
 
 

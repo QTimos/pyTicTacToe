@@ -94,7 +94,7 @@ pyTicTacToe/
 │   ├── iconProject.ico          # application icon
 │   └── Animation.gif
 ├── dist/                        # Pre-built binaries
-│   ├── TicTacToeLinux.tar.gz
+│   ├── TicTacToeLinuxAndMac.tar.gz
 │   └── TicTacToeWin.zip
 ├── .gitignore
 ├── .gitattributes
