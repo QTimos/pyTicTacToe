@@ -1,6 +1,8 @@
 import random
 import pygame
 import ctypes
+import sys
+from pathlib import Path
 
 pygame.init()
 GWL_EXSTYLE = -20
@@ -9,8 +11,7 @@ LWA_ALPHA = 0x00000002
 
 def setWindowTransparency(hwnd, opacity=255):
     user32 = ctypes.windll.user32
-    user32.SetWindowLongA(hwnd, GWL_EXSTYLE, 
-                         user32.GetWindowLongA(hwnd, GWL_EXSTYLE) | WS_EX_LAYERED)
+    user32.SetWindowLongA(hwnd, GWL_EXSTYLE, user32.GetWindowLongA(hwnd, GWL_EXSTYLE) | WS_EX_LAYERED)
     user32.SetLayeredWindowAttributes(hwnd, 0, opacity, LWA_ALPHA)
 
 def minimizeWindow(hwnd):
@@ -228,9 +229,20 @@ def resetGame(window, cells, cellsIndexedStates):
             row[col] = 0
     return pickBeginningState()
 
+def getWindowIconPath(icon):
+    """Get the correct path for resources when assets/ is sibling to src/"""
+    try:
+        base_path = Path(sys._MEIPASS)
+    except AttributeError:
+        base_path = Path(__file__).parent.parent
+    
+    icon_path = base_path / "assets" / icon
+    # print(f"Looking for icon at: {icon_path}")
+    return str(icon_path)
+
 
 def main():
-    windowIcon = pygame.image.load("./assets/iconProject.png")
+    windowIcon = pygame.image.load(getWindowIconPath("iconProject.png"))
     pygame.display.set_icon(windowIcon)
 
     window = pygame.display.set_mode((400, 470), pygame.NOFRAME)
@@ -242,8 +254,9 @@ def main():
     window.blit(background,(0,0))
     pygame.display.set_caption("TicTacToe")
     hwnd = pygame.display.get_wm_info()["window"]
-    setWindowTransparency(hwnd, 100)
-    setWindowRoundedCorners(hwnd, 70)
+    if sys.platform == "win32":
+        setWindowTransparency(hwnd, 170)
+        setWindowRoundedCorners(hwnd, 70)
 
     exitRectWidth = 60
     exitRectHeight = 11
@@ -297,14 +310,20 @@ def main():
 
     backgroundColor = (46, 59, 79)
     window.fill(backgroundColor)
-    textFont = pygame.sysfont.SysFont("dutch", 26)
+    try:
+        textFont = pygame.font.SysFont("dutch", 26)
+    except:
+        textFont = pygame.font.SysFont(None, 26)
     while run:
         pygame.font.init()
         if run:
             gridColor = (235, 215, 255) if turn == "x" else (255, 255, 255)
             drawGrid(window, gridColor, vertRightX, vertRightY, vertLeftX, vertLeftY, horizRightX, horizRightY, horizLeftX, horizLeftY, edgeRightX, edgeRightY, edgeLeftX, edgeLeftY, edgeTopX, edgeTopY, edgeBottomX, edgeBottomY, horizontalWidth, horizontalHeight, verticalWidth, verticalHeight)
-            drawExitRect(window, (240,150,190),(exitRectX,exitRectY,exitRectWidth,exitRectHeight),4)
-            drawMinRect(window, (240,240,150),(minRectX,minRectY,minRectWidth,minRectHeight),4)
+            if sys.platform == "win32":
+                drawExitRect(window, (240,150,190),(exitRectX,exitRectY,exitRectWidth,exitRectHeight),4)
+                drawMinRect(window, (240,240,150),(minRectX,minRectY,minRectWidth,minRectHeight),4)
+            else:
+                drawExitRect(window, (240,150,190),(exitRectX,exitRectY,exitRectWidth,exitRectHeight),0)
             turnSymbolFont = pygame.sysfont.SysFont("helvetica", 50)
             turnText = textFont.render("Current turn is :", False, gridColor)
             turnSymbol = turnSymbolFont.render(turn, False, gridColor)
@@ -326,7 +345,8 @@ def main():
                         return
 
                     if (mousePos[0] in range (minRectWidthRange[0],minRectWidthRange[1])) and (mousePos[1] in range(minRectHeightRange[0],minRectHeightRange[1])):
-                        minimizeWindow(hwnd)
+                        if sys.platform == "win32":
+                            minimizeWindow(hwnd)
 
                     if ( mousePos[0] in range(10, 390) and mousePos[1] in range(10, 390) and conditionX and conditionY):
                         selectedCell, selectedCellRow, selectedCellCol = ( getSelectedCell(mousePos, cells))
