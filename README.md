@@ -33,15 +33,17 @@ A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pyg
 #### Prerequisites
 - Python 3.8 or higher
 - pip package manager
+- pipx package manager
 
 #### Steps
-1. Clone or download the repository
-2. Navigate to the project directory:
+1. Open your prefered shell in a terminal emulator
+2. Clone or download the repository
+3. Navigate to the project directory:
 ```bash
 cd path/to/pyTicTacToe
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 ```bash
 pip install -r src/requirements.txt
 ```
@@ -74,7 +76,7 @@ pip install -r src/requirements.txt
     exit
     ```
 
-4. Run the game:
+5. Run the game:
 ```bash
 python src/main.py
 ```
