@@ -98,9 +98,7 @@ pyTicTacToe/
 ├── src/                         # Source code
 │   ├── main.py                  # Main game logic
 │   ├── requirements.txt         # dependencies
-│   ├── run.bat                  
-├── build/
-│   └── TicTacToe/               # pyinstaller build files
+│   └── run.bat
 ├── assets/
 │   ├── iconProject.ai 
 │   ├── iconProject.png 
@@ -109,7 +107,8 @@ pyTicTacToe/
 ├── dist/                        # Pre-built binaries
 │   ├── TicTacToeLinux.tar.gz
 │   └── TicTacToeWin.zip
-├── .gitattributes                
+├── .gitignore
+├── .gitattributes
 ├── TicTacToe.spec               # spec file
 ├── README.md                    # This file
 └── LICENSE                      # License file
