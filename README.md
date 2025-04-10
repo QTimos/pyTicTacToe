@@ -33,7 +33,6 @@ A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pyg
 #### Prerequisites
 - Python 3.8 or higher
 - pip package manager
-- pipx package manager
 
 #### Steps
 1. Open your prefered shell in a terminal emulator
@@ -51,6 +50,7 @@ pip install -r src/requirements.txt
 * If You're On linux And You're Having A Problem Installing Dependencies Use This:
  1. Install virtualenv (you can use your prefered shell instead of "bash"):
     ```bash
+    pip install pipx
     pipx install virtualenv
     pipx ensurepath
     bash
@@ -105,6 +105,7 @@ pip install -r requirements.txt
 * If You're On linux And You're Having A Problem Installing Dependencies Use This:
  1. Install virtualenv (you can use your prefered shell instead of "bash"):
     ```bash
+    pip install pipx
     pipx install virtualenv
     pipx ensurepath
     bash
