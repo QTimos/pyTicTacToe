@@ -2,7 +2,7 @@
 
 ### <div align="center"> <img src="./assets/iconProject.png" alt="Tic-Tac-Toe" width="65"> </div>
 
-### <p align="center">A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame. </p>
+#### <p align="center">A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame. </p>
 
 ## Demo
 
