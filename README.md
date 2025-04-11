@@ -3,7 +3,7 @@
   <img src="./assets/iconProject.png" alt="Tic-Tac-Toe" width="65">
 </div>
 
-A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame. Created as part of the Cerberus coding challenge.
+A classic Tic-Tac-Toe game with a graphical interface, built in Python using Pygame.
 
 ## Demo
 
