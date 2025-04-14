@@ -17,7 +17,7 @@
 - ✅ Win/draw detection
 - ⚡ Quick animations
 - 🖱️ Mouse-click controls
-- 🌍 Cross-platform support
+- 🌍 Windows and Linux support
 
 ## Installation
 
@@ -47,9 +47,9 @@ pip install -r src/requirements.txt
 ```
 
 * If You're On linux And You're Having A Problem Installing Dependencies Use This:
- 1. Install virtualenv (you can use your prefered shell instead of "bash"):
+ 1. Install virtualenv (replace "bash" with your shell and "apt" with your package manager):
     ```bash
-    pip install pipx
+    sudo apt install pipx
     pipx install virtualenv
     pipx ensurepath
     bash
@@ -67,6 +67,10 @@ pip install -r src/requirements.txt
     pip install -r requirements.txt
     ```
 
+5. Run the game:
+```bash
+python src/main.py
+```
 * If You Used Virtualenv:
  - Clean up virtual environment:
     ```bash
@@ -74,11 +78,6 @@ pip install -r src/requirements.txt
     rm -rf venv
     exit
     ```
-
-5. Run the game:
-```bash
-python src/main.py
-```
 
 
 ### Option 3: Build Your Own Binary Using Pyinstaller
@@ -102,9 +101,9 @@ pip install -r requirements.txt
 ```
 
 * If You're On linux And You're Having A Problem Installing Dependencies Use This:
- 1. Install virtualenv (you can use your prefered shell instead of "bash"):
+ 1. Install virtualenv (replace "bash" with your shell and "apt" with your package manager):
     ```bash
-    pip install pipx
+    sudo apt install pipx
     pipx install virtualenv
     pipx ensurepath
     bash
